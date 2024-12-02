@@ -1,0 +1,46 @@
+@host = http://localhost:3000/api
+
+GET {{host}}/products
+
+###
+POST {{host}}/products
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNjc0ZDkwNWY3NDRjODFlMzZkODI5ZTUyIiwiaWF0IjoxNzMzMTM5Mjc1fQ.6ZDOuBjnaOrv9kporv0HLmCZUDP3I3eoIb3mHcRVuTI
+
+{
+    "name": "Turbo fregona",
+    "description": "Te deja la casa como los chorros de oro",
+    "department":"hogar",
+    "price":25,
+    "stock":20,
+    "available": true
+
+}
+
+###
+GET {{host}}/products/671f6f8b2bede92b1af1a398
+
+###
+GET {{host}}/products/price/45/90
+
+
+###
+POST {{host}}/users/register
+Content-Type: application/json
+
+{
+    "username": "Bisbi",
+    "email": "princesa@gmail.com",
+    "password":"sabesqueereslaprincesa",
+    "roles":"admin"
+
+}
+
+###
+POST {{host}}/users/login
+Content-Type: application/json
+
+{
+    "email": "princesa@gmail.com",
+    "password":"sabesqueereslaprincesa"
+}
