@@ -5,7 +5,7 @@ const User = require('../models/users.model')
 
 const createUser = async (req, res, next) => {
     try {
-        req.body.password = await bcrypt.hash(req.body.password, 13)
+        req.body.password = await bcrypt.hash(req.body.password, 7)
         const user = await User.create(req.body)
         res.json(user)
     } catch (error) {

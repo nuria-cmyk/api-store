@@ -1,4 +1,5 @@
-@host = http://localhost:3000/api
+#@host = http://localhost:3000/api
+@host = https://api-store-dbal.onrender.com/api
 
 GET {{host}}/products
 
